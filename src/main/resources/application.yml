@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: Spring-boot
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ccc?useUnicode=true&&characterEncoding=uft-8&&useSSL=flase
+      username: root
+      password: 1234
+      hikari:
+        auto-commit: true
+        connection-test-query: SELECT 1
+        connection-timeout: 30000
+        idle-timeout: 600000
+        max-lifetime: 620000
+        maximum-pool-size: 30
+        minimum-idle: 5
+        pool-name: DatebookHikariCP
+        read-only: false
+
+
+mybatis:
+  type-aliases-package: com.cqc.hellospringboot.domain
+  mapper-location: classpath:mapper/*.xml
+
+
+server:
+  port: 8088
+  servlet:
+    context-path: /boot
+
+logging:
+  file:
+    name: logs/spring-boot-hello.log
+  level.org.springframework.web: DEBUG
+

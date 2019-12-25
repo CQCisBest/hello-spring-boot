@@ -1,0 +1,44 @@
+2019-12-24 12:17:03.073  INFO 10380 --- [main] c.c.h.HelloSpringBootApplication         : Starting HelloSpringBootApplication on CQC with PID 10380 (E:\SpringBootProject\hello-spring-boot\target\classes started by CQC in E:\SpringBootProject\hello-spring-boot)
+2019-12-24 12:17:03.076  INFO 10380 --- [main] c.c.h.HelloSpringBootApplication         : No active profile set, falling back to default profiles: default
+2019-12-24 12:17:04.042  INFO 10380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-12-24 12:17:04.054  INFO 10380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 12:17:04.088  INFO 10380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-24 12:17:04.193  INFO 10380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2019-12-24 12:17:04.193 DEBUG 10380 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-12-24 12:17:04.193  INFO 10380 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1055 ms
+2019-12-24 12:17:04.382  INFO 10380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 12:17:04.393 DEBUG 10380 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-12-24 12:17:04.475 DEBUG 10380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2019-12-24 12:17:04.506 DEBUG 10380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-12-24 12:17:04.516 DEBUG 10380 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-12-24 12:17:04.608  INFO 10380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/boot'
+2019-12-24 12:17:04.617  INFO 10380 --- [main] c.c.h.HelloSpringBootApplication         : Started HelloSpringBootApplication in 2.143 seconds (JVM running for 3.544)
+2019-12-24 13:41:08.893  INFO 1576 --- [main] c.c.h.HelloSpringBootApplication         : Starting HelloSpringBootApplication on CQC with PID 1576 (E:\SpringBootProject\hello-spring-boot\target\classes started by CQC in E:\SpringBootProject\hello-spring-boot)
+2019-12-24 13:41:09.104  INFO 1576 --- [main] c.c.h.HelloSpringBootApplication         : No active profile set, falling back to default profiles: default
+2019-12-24 13:41:14.229  INFO 1576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-12-24 13:41:14.259  INFO 1576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 13:41:14.260  INFO 1576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-24 13:41:14.421  INFO 1576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2019-12-24 13:41:14.421 DEBUG 1576 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-12-24 13:41:14.422  INFO 1576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4780 ms
+2019-12-24 13:41:15.765  INFO 1576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 13:41:15.851 DEBUG 1576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-12-24 13:41:16.446 DEBUG 1576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2019-12-24 13:41:16.485  INFO 1576 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-24 13:41:16.637 DEBUG 1576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-12-24 13:41:16.719 DEBUG 1576 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-12-24 13:41:17.076  INFO 1576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/boot'
+2019-12-24 13:41:17.080  INFO 1576 --- [main] c.c.h.HelloSpringBootApplication         : Started HelloSpringBootApplication in 14.303 seconds (JVM running for 27.745)
+2019-12-24 13:43:06.669  INFO 1576 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-24 13:43:06.670  INFO 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-24 13:43:06.670 DEBUG 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-12-24 13:43:06.677 DEBUG 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-12-24 13:43:06.678  INFO 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-12-24 13:43:06.759 DEBUG 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/boot/index", parameters={}
+2019-12-24 13:43:06.763 DEBUG 1576 --- [http-nio-8088-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cqc.hellospringboot.controller.ThymeleafController#index(Model)
+2019-12-24 13:43:06.991 DEBUG 1576 --- [http-nio-8088-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/signed-exchange;v=b3, application/xml;q=0.9, */*;q=0.8]
+2019-12-24 13:43:10.694 DEBUG 1576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-12-24 13:43:15.022 DEBUG 1576 --- [http-nio-8088-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/boot/index", parameters={}
+2019-12-24 13:43:15.023 DEBUG 1576 --- [http-nio-8088-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cqc.hellospringboot.controller.ThymeleafController#index(Model)
+2019-12-24 13:43:15.029 DEBUG 1576 --- [http-nio-8088-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/signed-exchange;v=b3, application/xml;q=0.9, */*;q=0.8]
+2019-12-24 13:43:15.032 DEBUG 1576 --- [http-nio-8088-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

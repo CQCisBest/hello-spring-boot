@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqc.hellospringboot.mapper.DealRecordMapper">
+  <resultMap id="BaseResultMap" type="com.cqc.hellospringboot.domain.DealRecord">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="claim_voucher_id" jdbcType="INTEGER" property="claimVoucherId" />
+    <result column="deal_sn" jdbcType="CHAR" property="dealSn" />
+    <result column="deal_time" jdbcType="TIMESTAMP" property="dealTime" />
+    <result column="deal_way" jdbcType="VARCHAR" property="dealWay" />
+    <result column="deal_result" jdbcType="VARCHAR" property="dealResult" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+  </resultMap>
+</mapper>
