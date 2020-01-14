@@ -1,102 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <!-- import CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
-  <style>
-  		body,html{
-  			margin: 0;
-  			height: 100%;	
-			font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
-			font-weight: 400;
-  		}
-  	</style>
-  <style>
-  	#app{
-  		height: 100%;
-  		background-image: url(../static/images/snow.jpg);
-		background-repeat:no-repeat;
-		background-size: 100% 100%;
-  		
-  	}
-      .bg-dark{
-          background: aqua;
-      }
-  	.lg-bg{
-		opacity: 0.93;
-		border-radius: 15px;
-  		width: 100%;
-  		height: 500px;
-  		background: #fcfcfc;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		animation: bgbody 0.8s ease;
-  	}
-	@keyframes bgbody {
-	      from {
-	        -webkit-transform: translate3d(0, -100%, 0);
-	        transform: translate3d(0, -100%, 0);
-	        visibility: visible;
-	      }
-	    
-	      to {
-	        -webkit-transform: translate3d(0, 0, 0);
-	        transform: translate3d(0, 0, 0);
-	      }
-	    }
-	
-	.login{
-		width: 70%;	
-		text-align: center;
-	}
-	p{
-		font-size: 30px;
-		margin-bottom: 15px;
-	}
-	.el-input__inner{
-		background: #fcfcfc;
-		margin: 5px;
-		border: 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-		
-	}
-  </style>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            font-weight: 400;
+        }
+    </style>
+    <style>
+        #app {
+            height: 100%;
+            background-image: url(images/snow.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .bg-dark {
+            background: aqua;
+        }
+
+        .lg-bg {
+            opacity: 0.93;
+            border-radius: 15px;
+            width: 100%;
+            height: 500px;
+            background: #fcfcfc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bgbody 0.8s ease;
+        }
+
+        @keyframes bgbody {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .login {
+            width: 70%;
+            text-align: center;
+        }
+
+        p {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .el-input__inner {
+            background: #fcfcfc;
+            margin: 5px;
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 0;
+        }
+    </style>
 </head>
 <body>
-  <div id="app">
-	<el-container>
-		<el-main>
-			<el-row type="flex" justify="center">
-				<el-col :span="6">			
-				<div class="lg-bg">
-				<div class="login">
-					<p>登录界面</p>
-				<el-input class="ipt" v-model="input1" placeholder="请输入内容"></el-input>
-				<el-input class="ipt" v-model="input2" placeholder="请输入密码" show-password></el-input>
-				<el-button type="primary" plain>登录</el-button>
-				<el-button type="danger" plain>重置</el-button>
-				</div>
-				</div>
-				</el-col>
-			</el-row>
-		</el-main>
-	</el-container>
-  </div>
+<div id="app">
+    <el-container>
+        <p>{{input1}}</p>
+        <el-main>
+            <el-row type="flex" justify="center">
+                <el-col :span="6">
+                    <div class="lg-bg">
+                        <div class="login">
+                            <p>登录界面</p>
+                            <el-input class="ipt" v-model="input1" placeholder="请输入内容"></el-input>
+                            <el-input class="ipt" v-model="input2" placeholder="请输入密码" show-password></el-input>
+                            <el-button type="primary" @click.native="login()" plain>登录</el-button>
+                            <el-button type="danger" plain>重置</el-button>
+                        </div>
+                    </div>
+                </el-col>
+            </el-row>
+        </el-main>
+    </el-container>
+</div>
 </body>
-  <!-- import Vue before Element -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-  <!-- import JavaScript -->
-  <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: function() {
-        return {input1:'',
-		        input2:''
-		 }
-      }
+<!-- import Vue before Element -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+
+
+<script>
+   var vm = new Vue({
+        el: '#app',
+        data: function () {
+
+            return {
+                input1: '',
+                input2: ''
+            }
+        },
+       methods:{
+            login:function () {
+                let url = "login"
+                 axios.post(url,{
+                     usr:this.input1,
+                     pwd:this.input2
+                 }).then(function (res) {
+                     console.log(res);
+
+                     if (res.data.msg){
+                         alert("Welcome")
+                     }else {
+                         alert("账号或密码错误")
+                     }
+
+                 })
+            }
+       }
     })
-  </script>
+  /**  function login(){
+       $.ajax({
+           url:"login",
+           type:"GET",
+           data:{usr:vm.input1,pwd:vm.input2},
+           contentType:application/x-www-form-urlencoded,
+           success:function (res) {
+               if (res.data==1){
+                   window.location.replace("http://www.baidu,com")
+               }else {
+                   window.location.reload();
+               }
+
+           }
+       })
+    }*/
+</script>
 </html>
