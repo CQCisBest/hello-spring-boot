@@ -10,6 +10,11 @@ public class ThymeleafController {
     @GetMapping("/index")
     public String index(Model model){
        model.addAttribute("name","张三");
+        return "main";
+    }
+    @GetMapping("/tologin")
+    public String tologin(Model model){
+        model.addAttribute("name","张三");
         return "login";
     }
 }

@@ -79,10 +79,12 @@
                     <div class="lg-bg">
                         <div class="login">
                             <p>登录界面</p>
+                            <form action="index" method="get">
                             <el-input class="ipt" v-model="input1" placeholder="请输入内容"></el-input>
                             <el-input class="ipt" v-model="input2" placeholder="请输入密码" show-password></el-input>
-                            <el-button type="primary" @click.native="login()" plain>登录</el-button>
+                            <el-button type="primary" native-type="submit" @click.native="login()" plain>登录</el-button>
                             <el-button type="danger" plain>重置</el-button>
+                            </form>
                         </div>
                     </div>
                 </el-col>
@@ -107,25 +109,29 @@
                 input1: '',
                 input2: ''
             }
-        },
-       methods:{
-            login:function () {
-                let url = "login"
-                 axios.post(url,{
-                     usr:this.input1,
-                     pwd:this.input2
-                 }).then(function (res) {
-                     console.log(res);
-
-                     if (res.data.msg){
-                         alert("Welcome")
-                     }else {
-                         alert("账号或密码错误")
-                     }
-
-                 })
-            }
-       }
+        }
+       // methods:{
+       //      login:function () {
+       //          let url = "login"
+       //          let basePath="localhost:8088/boot"
+       //           axios.post(url,{
+       //               usr:this.input1,
+       //               pwd:this.input2
+       //           }).then(function (res) {
+       //               console.log(res);
+       //
+       //               if (res.data.msg){
+       //                   alert(basePath);
+       //                   axios.get("index").then(function (res) {
+       //
+       //                   })
+       //               }else {
+       //                   alert("账号或密码错误")
+       //               }
+       //
+       //           })
+       //      }
+       // }
     })
   /**  function login(){
        $.ajax({
